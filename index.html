@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC
+  "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Markup and CSS (except where explicitly mentioned) All Rights Reserved, Miles Wu -->
+
+<head>
+	<title>mileswu: Welcome</title>
+	
+	<!-- SIL Open Font License -->
+	<link href='http://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet' type='text/css'>
+	
+	<!-- BSD Licensed -->
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css">
+	<script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js" charset="utf-8"></script>
+	
+	<script type="text/javascript">
+		YUI().use('node', 'transition', function (Y) {
+			Y.on("domready", function () {
+				Y.on("click", function(e) {
+					Y.one('#construction-mask').setStyle('display', 'block');
+					Y.one('#construction-mask').transition({
+						easing: 'ease-out',
+						duration: 1.5,
+						delay: 1,
+						opacity: 0.0
+					}, function() {
+						this.setStyle('display', 'none');
+						this.setStyle('opacity', '1.0');
+						
+					});
+					
+					e.halt();
+				}, 'a.notdone');
+			});
+		});
+	</script>
+	
+	<style>
+		html {
+			/*background-color: rgb(240, 240, 240);*/
+			background-color: rgb(10, 10, 10);
+			font-family: 'Century Gothic', arial, serif;
+			color: white;
+			background-image: url("br-flower.png");
+			background-repeat: no-repeat;
+			background-position: bottom right;
+			background-attachment: fixed;
+		}
+		
+
+	
+		#welcome-header {
+			margin-top: 40px;
+			margin-left: 50px;
+			margin-bottom: 40px;
+		}
+		
+		#welcome-header h1 {
+			font-family: 'Amaranth', arial, serif;
+			font-size: 600%;
+		}
+		
+		#welcome-header h2 {
+			font-size: 110%;
+			margin-top: -5px;
+			margin-left: 8px;
+		}
+		
+		#welcome-footer {
+			font-size: 90%;
+			padding-top: 30px;
+			width: 300px;
+			margin: auto;
+		}
+		
+		#welcome-footer a {
+			text-decoration: none;
+			color: rgb(180, 0, 0);
+		}
+		#welcome-footer a:hover {
+			text-decoration: underline;
+		}
+		
+		.row {
+			width: 600px;
+			margin: auto;
+		}
+		
+		.clear {
+			clear: both;
+		}
+		
+		.welcome-box {
+			float: left;
+			margin-left: 10px;
+			margin-right: 10px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			position: relative;
+		}
+		
+		/*.welcome-box img {
+			border-radius: 8px 8px 0 0;
+		}*/
+		
+		.welcome-box div {
+			background-color:rgba(0,0,0,0.5);
+			
+			width: 250px;
+			height: 30px;
+			line-height: 30px;
+			
+			position: absolute;
+			margin: 0;
+			top: 170px;
+		}
+		
+		.welcome-box p {
+			margin: 0;
+			padding-left: 10px;
+		}
+
+		.welcome-box a {
+			width: 250px;
+			height: 200px;
+			display: block;
+			margin: 0;
+			padding: 0;
+			
+			color: white;
+			font-weight: bold;
+			text-decoration: none;
+		}
+		
+		.welcome-box a:hover {
+			text-decoration: underline;
+		}
+		
+		.welcome-box a:hover div {
+			background-color:rgba(0,0,0,0.85);
+			text-decoration: underline;
+		}
+		
+		#construction-mask {
+			background-color:rgba(0,0,0,0.85);
+			color: white;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			display: none;
+		}
+		#construction-mask div {
+			position: absolute;
+			top: 50%;
+			left: 50%; 
+			width:600px;
+			height: 50px;
+			margin-left:-250px;
+			margin-top:-25px;
+		}
+		
+		#construction-mask div p {
+			font-size: 150%;
+			width: 600px;
+			margin:auto;
+			text-align: center;
+			line-height: 40px;
+		}
+		
+		
+	</style>
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-23233820-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+</head>
+
+<body>
+	<div id="welcome-header">
+		<h1>Welcome.</h1>
+		<h2>&raquo;&nbsp;the personal website of Miles Wu</h2>
+	</div>
+	<div id="welcome-links">
+		<div class="row">
+			<div class="welcome-box">
+				<a href="http://blog.mileswu.com">
+					<img src="img-blog.png" />
+					<div><p>The Blog</p></div>
+				</a>
+			</div>
+			<div class="welcome-box">
+				<a class="notdone" href="/coding">
+					<img src="code.png" />
+					<div><p>Coding</p></div>
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="welcome-box">
+				<a href="http://www.flickr.com/photos/mileswu">
+					<img src="photography.png" />
+					<div><p>Photography</p></div>
+				</a>
+			</div>
+			<div class="welcome-box">
+				<a href="/work">
+					<img src="academic.png" />
+					<div><p>Academic and Professional</p></div>
+				</a>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div id="welcome-footer">
+		<a class="notdone" href="/about">about</a> | <a href="/about/contact.html">other contact info</a> | <a href="mailto:miles.wu@wu-home.co.uk">email</a>
+	</div>
+	
+	<div id="construction-mask">
+		<div>
+			<p>Unfortunately the site is still under construction.</p><p>Thank you for your patience.</p>
+		</div>
+	</div>
+</body>
+
+</html>

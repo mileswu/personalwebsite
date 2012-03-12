@@ -1,0 +1,365 @@
+/* GENERAL */
+html {
+	background-color: rgb(248, 250, 253);
+	font-family: "Palatino", "Palatino Linotype", "Palatino LT STD", Georgia, serif;			
+	color: rgb(67, 67, 67);
+	min-width: 950px;
+}
+
+/*html, body {
+	min-height: 100%;
+	height: 100%;
+}*/
+
+body {
+	position: relative;
+	
+}
+
+h1, h2, #header {
+	font-family: "Droid Sans";
+}
+h1, h2, h1 a, h2 a {
+	color: rgb(60, 173, 197);
+}
+
+a {
+	color: rgb(200, 18, 18);
+	text-decoration: none;
+}
+a:hover {
+	color: rgb(140, 10, 10);
+	text-decoration: underline;
+}
+
+p {
+	padding-bottom: 0.5em;
+	line-height: 1.5em;
+}
+
+p + p {
+	text-indent: 1.5em;
+}
+
+
+#wrapper {
+	padding-left: 36px;
+	padding-right: 36px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/* BORDERS */
+body {
+	border: 15px solid rgb(222, 233, 255);
+}
+
+/*
+#border-t, #border-b, #border-l, #border-r  {
+	background-color: rgb(222, 233, 255);
+}
+#border-t, #border-b {
+	position: absolute;
+	height: 15px;
+	left: 0px;
+	right: 0px;
+	min-width: 950px;
+}
+#border-t {
+	top: 0px;
+}
+#border-b {
+	bottom: 0px;
+}
+#border-l, #border-r {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	width: 15px;
+}
+#border-l {
+	left: 0px;
+}
+#border-r {
+	right: 0px;
+}*/
+
+/* HEADER */
+#header {
+	margin-bottom: 30px;
+}
+#header-l {
+	font-size: 240%;
+	margin-right: 290px;
+	float: left;
+	padding-right: 150px;
+	margin-top: -5px;
+}
+
+#header-subtitle {
+	margin-top: 10px;
+	padding-left: 20px;
+	font-size: 60%;
+	color: rgb(195, 115, 0);
+}
+
+#header-r {
+	margin-top: -13px;
+	width: 290px;
+	margin-left: -290px;
+	float: right;
+	text-align: right;
+	font-family: "Verdana";
+	font-size: 85%;
+}
+#header-r ul {
+	margin-top: 10px;
+}
+#header-r li {
+	font-size: 120%;
+	line-height: 20px;
+}
+
+/*#logo {
+	color: rgb(60, 173, 197);
+	font-size: 240%;
+	font-weight: 700;
+}
+#logo .first-word {
+	color: rgb(142, 139, 139);
+}*/
+
+#header-r a.selected, .current_page_item a, a.selected {
+	color: rgb(67, 67, 67);
+}
+
+/* CONTENT */
+#content {
+	margin-right: 290px;
+	float: left;
+}
+
+div.post {
+	position: relative;
+	padding-bottom: 60px;
+}
+
+.post-top h2 {
+	font-size: 170%;
+	margin-right: 200px;
+	margin-bottom: 10px;
+	margin-left: -20px;
+	padding-left: 20px;
+	background-image: url('bullet.png');
+	background-repeat: no-repeat;
+	background-position: 0px 8px;
+}
+
+/*.post-top h2:before {
+	content: "â™¦ ";
+}*/
+
+.post-top a:hover {
+	color: rgb(60, 173, 197);
+}
+
+.post-info{
+	padding-top: 10px;
+	font-size: 75%;
+}
+.post-info, .post-info a {
+	color: rgb(195, 115, 0);
+	font-family: "Droid Sans";
+}
+
+.more-link {
+	display: block;
+	text-indent: 0em;
+} 
+
+/* SIDEBAR */
+#sidebar {
+	float: right;
+	margin-left: -290px;
+	text-align: right;
+}
+
+#sidebar .navlink-box {
+	border-right:1px solid rgb(150, 150, 150);			
+	margin-right: 15px;
+	padding-right: 10px;
+}
+
+#sidebar .navlink-box h2 {
+	font-weight: bold;
+	font-family: "Palatino", "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	font-size: 150%;
+}
+
+/*COMMENTS*/
+#comments {
+	margin-left: 20px;
+}
+
+#comments-title {
+	color: rgb(60, 173, 197);
+	font-weight: bold;
+	margin-left: -20px;
+	margin-bottom: 14px;
+}
+
+.comment-avatar {
+	float: left;
+}
+
+.comment-meta, .comment-body, .comment-awaiting-moderation {
+	margin-left: 50px;
+}
+
+.comment-meta a {
+	color: rgb(195, 115, 0);
+}
+
+.comment-meta {
+	font-family: "Droid Sans";
+	font-size: 80%;
+	margin-bottom: 7px;
+}
+
+.comment-reply, .comment-edit-link, .comment-anchor {
+	font-size: 85%;
+	padding-right: 2px;
+}
+
+.comment-awaiting-moderation, .logged-in-as {
+	background-color: rgb(255,244,184);
+	border: 1px solid #c7c7c7;
+	font-family: "Droid Sans";
+	font-size: 75%;
+	padding: 3px;
+	padding-left: 7px;
+	padding-right: 7px;
+	margin-bottom: -7px;
+}
+
+.logged-in-as {
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.comment-date {
+	font-style: italic;
+	padding-top: 6px;
+	font-size: 85%;
+	float: right;
+	font-family: "Palatino", "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	color: rgb(195, 115, 0);
+}
+.comment-author {
+	padding-right: 5px;
+}
+.comment-author, .comment-author a {
+	color: rgb(200, 18, 18);
+}
+
+.comment-body {
+	font-size: 85%;
+	padding-bottom: 10px;
+}
+
+#reply-title {
+	margin-top: 10px;
+	color: rgb(60, 173, 197);
+	font-weight: bold;
+	font-size: 90%;
+}
+#comments li.depth-1 {
+	padding-left: 0px;
+}
+#comments li {
+	padding-left: 30px;
+}
+#commentform p {
+	text-indent: 0px;
+}
+#commentform label {
+	padding-right: 14px;
+	width: 120px;
+	vertical-align: top;
+	font-size: 75%;
+	text-align: right;
+	display: inline-block;
+}
+#commentform textarea, #commentform input {
+	width: 300px;
+	font-size: 80%;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+#commentform textarea {
+	height: 130px;
+}
+#commentform #submit {
+	margin-left: 134px;
+	width: 110px;
+	font-size: 70%;
+}
+
+.comment-notes {
+	margin-top: 2px;
+	margin-bottom: 5px;
+	font-size: 75%;
+	font-family: "Droid Sans";
+}
+
+/*ARCHIVE*/
+.archive-header {
+	font-size: 170%;
+}
+.archive-month {
+	font-size: 110%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.archive-list li {
+	padding-left: 16px;
+	padding-bottom: 5px;
+}
+
+.archive-list li:before {
+	content: "\00BB \0020";
+}
+
+/*TAG*/
+.tag-cloud-header {
+	font-size: 170%;
+}
+.tag-cloud {
+	padding-top: 15px;
+}
+
+/*SEARCH*/
+.search-header {
+	font-size: 170%;
+	padding-bottom: 15px;
+}
+
+/*RESUME*/
+.resume ul li {
+	list-style: circle;
+	margin-left: 30px;
+	
+}
+.resume h2 {
+	font-size: 120%;
+	margin-top: 20px;
+}
+.resume .bold {
+	font-weight: 700;
+}
