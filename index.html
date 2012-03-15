@@ -34,10 +34,22 @@
 					
 					e.halt();
 				}, 'a.notdone');
+
+				var update = function() {
+					if(location.hash == "#contact-info") {
+						Y.one('#contact-info').setStyle('display', 'block');
+					} else {
+						Y.one('#contact-info').setStyle('display', 'none');
+					}
+				}
+
+				window.onhashchange = update;
+				update();
+
+
 			});
 		});
 	</script>
-	
 	<style>
 		html {
 			/*background-color: rgb(240, 240, 240);*/
@@ -76,11 +88,11 @@
 			margin: auto;
 		}
 		
-		#welcome-footer a {
+		/*#welcome-footer*/ a {
 			text-decoration: none;
 			color: rgb(180, 0, 0);
 		}
-		#welcome-footer a:hover {
+		/*#welcome-footer*/ a:hover {
 			text-decoration: underline;
 		}
 		
@@ -144,7 +156,7 @@
 			text-decoration: underline;
 		}
 		
-		#construction-mask {
+		#construction-mask, #contact-info {
 			background-color:rgba(0,0,0,0.85);
 			color: white;
 			position: fixed;
@@ -153,6 +165,44 @@
 			height: 100%;
 			display: none;
 		}
+
+		#contact-info p.close {
+			float: right;
+			position: relative;
+			top: -10px;
+			left: 10px;
+			font-size: 200%;
+			font-weight: 700;
+		}
+
+
+		#contact-info div {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 500px;
+			margin-left: -250px;
+			height: 500px;
+			margin-top: -250px;
+			border: 1px solid rgb(155,155,155);
+			background-color: rgb(0,0,0);
+			padding: 20px 25px 25px 25px;
+			font-size: 80%;
+
+		}
+		#contact-info h3 {
+			font-size: 240%;
+			color: rgb(203, 109, 0);
+		}
+		#contact-info h4 {
+			padding-top: 10px;
+			font-size: 130%;
+			color: rgb(136, 73, 22);
+		}
+		.bold {
+			font-weight: 700;
+		}
+
 		#construction-mask div {
 			position: absolute;
 			top: 50%;
@@ -225,12 +275,40 @@
 		<div class="clear"></div>
 	</div>
 	<div id="welcome-footer">
-		<a class="notdone" href="/about">about</a> | <a href="/about/contact.html">other contact info</a> | <a href="mailto:miles.wu@wu-home.co.uk">email</a>
+		<a class="notdone" href="/about">about</a> | <a href="#contact-info">other contact info</a> | <a href="mailto:miles.wu@wu-home.co.uk">email</a>
 	</div>
 	
 	<div id="construction-mask">
 		<div>
 			<p>Unfortunately the site is still under construction.</p><p>Thank you for your patience.</p>
+		</div>
+	</div>
+
+	<div id="contact-info">
+		<div>
+			<p class="close"><a href="#">(X)</a></p>
+			<h3>Contact Info</h3>
+			<h4>Email</h4>
+			<ul>
+				<li>miles.wu@wu-home.co.uk</li>
+				<li>mawu@princeton.edu</li>
+			</ul>
+			<h4>IM</h4>
+			<ul>
+				<li><span class="bold">Skype</span>: milesawu</li>
+				<li><span class="bold">AIM</span>: mileswu</li>
+				<li><span class="bold">MSN</span>: miles.wu@wu-home.co.uk</li>
+				<li><span class="bold">GTalk/XMPP</span>: milesawu@gmail.com</li>
+			</ul>
+			<h4>Social</h4>
+			<ul>
+				<li><span class="bold">Github</span>: <a href="https://github.com/mileswu">mileswu</a></li>
+				<li><span class="bold">Twitter</span>: <a href="http://twitter.com/mileswu">@mileswu</a></li>
+				<li><span class="bold">Facebook</span>: <a href="http://www.facebook.com/milesawu">Miles Wu</a></li>
+				<li><span class="bold">Flickr</span>: <a href="http://flickr.com/photos/mileswu">mileswu</a></li>
+				<li><span class="bold">500px</span>: <a href="http://500px.com/mileswu">mileswu</a></li>
+				<li><span class="bold">last.fm</span>: <a href="http://www.last.fm/user/mileswu">mileswu</a></li>
+			</ul>
 		</div>
 	</div>
 </body>
